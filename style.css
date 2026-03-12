@@ -1,0 +1,393 @@
+@import "./fonts.css";
+
+:root {
+  --main-black-color: #272a33;
+  --green-color: #4fcf36;
+  --brown-color: #ee753e;
+  --black-color: #222222;
+  --gray-color: #e0e6ed;
+  --light-blue-color: #eef3f8;
+  --white-color: #fff;
+  --gray-menu-color: #d5dfe9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--brown-color);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main-black-color);
+}
+
+h2 {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.35;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1160px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 80px;
+  transition: 1s all;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.logo-img {
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.menu__list {
+  display: flex;
+  gap: 80px;
+  padding: 28px 0 28px 0;
+}
+
+.menu__link {
+  color: var(--main-black-color);
+  text-transform: uppercase;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.recommendations {
+  margin-bottom: 80px;
+}
+
+.recommendations__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommendations__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.recommendations__item {
+  display: flex;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+}
+
+.recommendations__item-img {
+  width: 220px;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  background-color: var(--light-blue-color);
+}
+
+.recommendations__item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px 0 30px 0;
+  margin: 0 31px 0 31px;
+}
+
+.recommendations__item-text {
+  max-width: 425px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  padding-bottom: 30px;
+}
+
+.recommendations__item-mark {
+  position: relative;
+  line-height: 1.45;
+}
+
+.recommendations__item-mark::before {
+  content: "";
+  display: inline-block;
+  vertical-align: 0px;
+  width: 14px;
+  aspect-ratio: 1/1;
+  margin-right: 10px;
+  background-image: url("./images/check_mark_green.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.recommendations__item-mark.orange::before {
+  background-image: url("./images/check_mark_orange.svg");
+}
+
+.button {
+  display: inline-block;
+  border-radius: 8px;
+  padding-block: 8px 12px;
+  padding-inline: 30px;
+  width: 159px;
+  height: 46px;
+  background-color: var(--black-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+.button:hover {
+  background-color: var(--brown-color);
+  color: var(--white-color);
+}
+
+.button.big-button {
+  width: 222px;
+  padding-inline: 29px;
+}
+
+.about-company {
+  margin-bottom: 50px;
+}
+
+.about-company__block {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 30px;
+}
+
+.about-company__images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-content: start;
+}
+
+.about-company__images-item.big {
+  grid-column: span 2;
+}
+
+.about-company__info {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-company__text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.about-company__text-main {
+  font-weight: 700;
+}
+
+.about-company__list {
+  max-width: 100%;
+}
+
+.about-company__list-item {
+  position: relative;
+  padding-left: 39px;
+}
+
+.about-company__list-item:before {
+  content: "";
+  top: 10px;
+  left: 0;
+  position: absolute;
+  width: 24px;
+  aspect-ratio: 1/1;
+  background-image: url("./images/check_mark_orange.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-company__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* Adaptive */
+
+@media (max-width: 1440px) {
+  .container {
+    max-width: 1160px;
+  }
+}
+
+@media (max-width: 1160px) {
+  .container {
+    max-width: 768px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  .header {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .menu__list {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    aspect-ratio: 1/1;
+    gap: 6px;
+    padding: 16px 13px 16px 13px;
+    border: 1px solid var(--main-black-color);
+    border-radius: 8px;
+    background-color: transparent;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+  }
+
+  .menu-span {
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-black-color);
+  }
+
+  .recommendations__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-company__block {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .about-company__images-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 360px;
+  }
+
+  .logo-img {
+    width: 185px;
+  }
+
+  .menu-btn {
+    width: 46px;
+    height: 46px;
+    padding: 14px 11px 14px 11px;
+    gap: 4px;
+  }
+
+  .recommendations__list {
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+  }
+
+  .recommendations__item {
+    flex-direction: column;
+    align-items: center;
+    max-width: 170px;
+  }
+
+  .recommendations__item:nth-last-child(-n + 2) {
+    display: none;
+  }
+
+  .recommendations__item-info {
+    padding: 10px 0 0 0;
+  }
+
+  .recommendations__item-text {
+    font-size: 16px;
+    line-height: 1.5;
+    padding-bottom: 0;
+    min-height: 100px;
+  }
+
+  .recommendations__item-mark {
+    font-size: 14px;
+  }
+
+  .recommendations__item-img {
+    width: 170px;
+  }
+
+  .about-company__images {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 390px) {
+  .container {
+    padding: 0;
+  }
+}
