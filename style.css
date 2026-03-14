@@ -65,7 +65,7 @@ img {
 }
 
 .container {
-  max-width: 1160px;
+  max-width: 1460px;
   padding: 0 10px;
   margin: 0 auto;
 }
@@ -264,13 +264,14 @@ img {
 
 @media (max-width: 1440px) {
   .container {
-    max-width: 1160px;
+    max-width: 1180px;
   }
 }
 
 @media (max-width: 1160px) {
   .container {
     max-width: 768px;
+    padding: 0;
   }
 
   h2 {
@@ -383,11 +384,5 @@ img {
 
   .about-company__images {
     gap: 15px;
-  }
-}
-
-@media (max-width: 390px) {
-  .container {
-    padding: 0;
   }
 }
